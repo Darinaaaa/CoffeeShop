@@ -1,0 +1,72 @@
+nav(
+    class="navbar navbar-expand-lg navbar-light" 
+    id="navContent"
+)
+    h2  
+        i(
+            class="fa fa-viadeo"
+        ) Taso
+    button(
+        class="navbar-toggler" 
+        type="button" 
+        data-toggle="collapse" 
+        data-target="#navbarTogglerDemo02" 
+        aria-controls="navbarTogglerDemo02" 
+        aria-expanded="false" 
+        aria-label="Toggle navigation"
+    )
+        span(
+            class="navbar-toggler-icon"
+        )
+    div(
+        class="collapse navbar-collapse"
+        id="navbarTogglerDemo02"
+    )
+        ul(
+            id = "site_header"
+            class="navbar-nav mr-auto mt-2 mt-lg-0"
+        )
+            li(
+                class="nav-item"
+            )
+                a(
+                    class="nav-link" 
+                    id ="navItem" 
+                    href="/"
+                ) Home
+            li(
+                class="nav-item dropdown" 
+            )
+                a.nav-link.dropdown-toggle(
+                    id = "navbarDropdownMenuLink"
+                    role="button" 
+                    data-toggle="dropdown" 
+                    aria-haspopup="true" 
+                    aria-expanded="false"
+                    href="#"
+                ) Корзина
+                div.dropdown-menu(
+                    aria-labelledby="navbarDropdownMenuLink"
+                )
+                    div.dropdown-item(
+                        id='cartView'
+                    )
+                    a.dropdown-item(
+                        target="_blank" 
+                        rel="noopener" 
+                        href="/order"
+                    ) 
+                        button(
+                        ) ORDER
+        div.searchDiv
+            input(
+                class="form-control mr-sm-2" 
+                type="search" 
+                placeholder="Search"
+            )
+            a(
+                id = "searchInput"
+            )
+                button(
+                    id="searchBtn"
+                ) Search

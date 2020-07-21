@@ -1,0 +1,21 @@
+include header
+include admin_site_header
+
+div.productContent
+    div.row.no-gutters(
+        id="blockContent"
+    )
+        div.col-md-8
+            div.card-body
+                p ID: #{item[0]['id']}
+                p Имя: #{item[0]['Имя']}
+                p Фамилия: #{item[0]['Фамилия']}
+                p Номер телефона: #{item[0]['Номер телефона']}
+                p summary: #{item[0]['summary']}
+                p.status Статус: #{item[0]['статус']}
+                p
+                button(
+                    data-item_id=item[0]['id']
+                ) ADD TO CART
+include footer
+script(src='js/status.js')

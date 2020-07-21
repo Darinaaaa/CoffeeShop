@@ -1,0 +1,26 @@
+div.card.mb-3
+    div.row.no-gutters(
+        id="blockContent"
+    )
+        div.col-md-4
+            a(
+                id='onProduct'
+                href='coffee?id='+val['id']
+            )
+                
+                img(
+                    src='images/'+val['Изображение'],
+                    alt=val['Название'],
+                )
+        div.col-md-8
+            div.card-body
+                a(
+                    id='onProduct'
+                    href='coffee?id='+val['id']
+                )
+                    h3(class='card-title') #{val['Название']}
+                    p #{val['Описание']}
+                    p(class='h4') Цена: #{val['Цена'].toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$& ')}грн
+                button.addButton(
+                    data-coffee_id=val['id']
+                ) ADD TO CART

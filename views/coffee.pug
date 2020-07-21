@@ -1,0 +1,26 @@
+include header
+include site_header
+
+div.productContent
+    div.row.no-gutters(
+        id="blockContent"
+    )
+        div.col-md-4
+            img(
+                src="images/"+coffee[0]['Изображение'],
+                alt=coffee[0]['Название'],
+            )
+        div.col-md-8
+            div.card-body
+                h3(class='card-title') #{coffee[0]['Название']}
+                p Страна производитель: #{coffee[0]['Страна производитель']}
+                p Сорт: #{coffee[0]['Сорт']}
+                p Вес: #{coffee[0]['Вес']}
+                p Производитель: #{coffee[0]['Производитель']}
+                p Описание: #{coffee[0]['Описание']}
+                p(class='h4') Цена: #{coffee[0]['Цена'].toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$& ')}грн
+                p
+                button.addButton(,
+                    data-coffee_id=coffee[0]['id']
+                ) ADD TO CART
+include footer

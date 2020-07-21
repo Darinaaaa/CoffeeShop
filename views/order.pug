@@ -1,0 +1,35 @@
+include header
+div.container
+    div.row
+        div.col.col-lg-6.m-auto
+            h3.h3 Order
+            div#cartView
+            h3.h3 Create order
+            form#coffeeOrder(action='')
+                div.form-group
+                    label(for='username') Name
+                    input(type='text', id='username', placeholder='Enter your name', class='form-control', required)
+                div.form-group
+                    label(for='surname') Surname
+                    input(type='text', id='surname', placeholder='Enter your surname', class='form-control', required)
+                div.form-group
+                    label(for='phone') Phone
+                    input(type='text', id='phone', placeholder='+0505050505', class='form-control', required)
+                div.form-group
+                    label(for='email') Email
+                    input(type='text', id='email', placeholder='mail@example.com', class='form-control', required)
+                div.form-group
+                    label(for='town') Town
+                    input(type='text', id='town', placeholder='Kharkiv', class='form-control', required)
+                div.form-group
+                    label(for='address') Address
+                    input(type='text', id='address', placeholder='Where are you', class='form-control', required)
+                div.form-group
+                    button( type='submit')
+                        a(  
+                            id= "coffeeOrder"
+                            rel="noopener" 
+                            href="/"
+                            )  FINISH ORDER
+include footer
+script(src='js/order.js')

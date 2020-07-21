@@ -1,0 +1,29 @@
+include header
+include admin_site_header
+
+h1 all orders
+table.table
+    thead
+        tr
+            th id 
+            th Имя
+            th Фамилия
+            th Номер телефона
+            th Сумма
+            th Статус
+
+    tbody
+        each val, index in order
+             
+            tr
+                td 
+                    a(
+                        id='onProduct'
+                        href='item?id='+val['id']
+                    ) #{val['id']}             
+                td #{val['Имя']}
+                td #{val['Фамилия']}
+                td #{val['Номер телефона']}
+                td #{val['summary']}
+                td #{val['статус']}
+include footer

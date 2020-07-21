@@ -1,0 +1,14 @@
+include header
+include site_header
+
+div.container.mb-4
+    div.row
+        div.col-xl-8.col-md-12
+            div(class='card-body d-flex flex-column align-items-start')
+                h2.searchVal Результаты поиска по запросу "#{searchval}":
+div.container
+    div.row
+        each val, index in coffee
+            include card.pug
+
+include footer
